@@ -1,0 +1,59 @@
+﻿.pagerOuterTable 
+{
+    background: none repeat scroll 0 0 #F1F5FB;
+}
+.pageCounter
+{
+    font-family: Tahoma;
+    font-size: 10pt;
+    color: #ffffff;
+    background-color: #39437e;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pageFirstLast
+{
+    font-family: Tahoma;
+    font-size: 10pt;
+    color: #4d5c93;
+    background-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;    
+}
+
+.pagePrevNextNumber
+{
+    font-family: Tahoma;
+    font-size: 10pt;
+    color: #4d5c93;
+    background-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;    
+}
+
+.pageCurrentNumber
+{
+    font-family: Tahoma;
+    font-size: 10pt;
+    color: #4d5c93;
+    font-weight: bold;
+    text-align: center;
+    border: solid 1px #1163a2;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.pageGroups
+{
+    font-family: Tahoma;
+    font-size: 10pt;
+}
+
+.pagerLink, .pagerLink#hover, .pagerLink#active, .pagerLink#visited
+{
+    font-family: Tahoma;
+    font-size: 10pt;
+    color: #1163a2;
+    text-decoration: none;    
+}

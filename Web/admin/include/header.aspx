@@ -1,0 +1,1 @@
+<div id="globalNav"><img src="/admin/images/header.jpg" width="960" height="280" alt="" /></div>

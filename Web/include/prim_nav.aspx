@@ -1,0 +1,1 @@
+<div id="primNav"><img src="/images/placeholder_navigation.jpg" width="1000" height="45" alt="Placeholder Navigation" /></div>

@@ -1,0 +1,20 @@
+<root>
+	<tools name="MainToolbar" dockable="true" enabled="true">
+		<tool name="Cut"/>
+		<tool name="Copy"/>
+		<tool name="Paste" shortcut="CTRL+!"/>
+		<tool name="PasteFromWordNoFontsNoSizes" />
+		<tool separator="true"/>
+		<tool name="Bold" shortcut="CTRL+B"/>
+		<tool name="Italic" shortcut="CTRL+I"/>
+		<tool name="Underline" shortcut="CTRL+U"/>
+		<tool name="ForeColor"/>
+		<tool separator="true"/>
+		<tool name="InsertOrderedList"/>
+		<tool name="InsertUnorderedList"/>
+		<tool separator="true"/>		
+		<tool name="LinkManager"/>
+		<tool name="Unlink"/>
+		<tool name="FormatStripper"/>
+	</tools>
+</root>

@@ -1,0 +1,16 @@
+body, p
+{
+	font: normal small/1.45em "Trebuchet MS" , "Helvetica";
+	color: #555555;
+	background-image: none !important;
+	background-color: #ffffff !important;
+}
+
+.RadEWrongWord
+{
+	background-color: yellow;
+}
+.RadEDomMouseOver
+{
+	background-color: #ffffcc;
+}

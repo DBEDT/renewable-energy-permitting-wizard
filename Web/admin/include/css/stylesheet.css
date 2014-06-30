@@ -1,0 +1,949 @@
+﻿@charset "utf-8";
+
+/* =RESET ----------------------------------------------------*/
+
+
+/* UNIVERSAL ELEMENTS */
+
+body
+{
+	font: normal small/1.25em Arial, sans-serif;
+	color: #174b55;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	background-image: url(/images/bg.gif);
+	background-repeat: repeat-x;
+	background-color: #014126;
+}
+
+#header
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 960px;
+	height: 169px;
+	float: left; 
+}
+
+.header
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.header a
+{
+	color: #FFF;
+	font: bold 90% small/1.25em Arial, sans-serif;
+}
+
+.header a:hover
+{
+	color: #FFF;
+	font: bold 90% small/1.25em Arial, sans-serif;
+}
+
+#footer
+{
+	margin: 0px 0px 0px 0px;
+	padding: 15px 0px 0px 0px;
+	float: left;
+	width: 960px;
+	height: 57px;
+	background-color: #FFF;
+}
+
+.footer
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#globalNav
+{
+	float: left;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px; 
+	height: 280px;
+	width: 960px;
+}
+
+#adminNav
+{
+	text-align: right;
+	margin: -30px 0px 20px 0px;
+}
+
+/* Turn off borders for linked images */
+
+img
+{
+	border: 0;
+}
+
+img.one
+{
+	border: 1px;
+	border: 1px solid #666666;
+}
+
+/* Section Header Styles and Image Use */
+
+
+
+/* PAGE CONTENT */
+
+
+#pageWrapper
+{
+	position: relative;
+	margin: 0px auto;
+	padding: 0px 0px 0px 0px;
+	width: 960px;
+}
+
+#contentWrapper
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	float: left;
+	width: 960px;
+	background-color: #FFFFFF;
+}
+
+#wideContentWrapper
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	float: left;
+	width: 960px;
+	background-color: #FFFFFF;
+}
+
+.wideContentWrapper
+{
+	margin: 0px 0px 0px 0px;
+	padding: 20px 50px 0px 50px;
+}
+
+#callout
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	float: left;
+	width: 219px;
+	background-image: url(/images/callout_bg.gif);
+	background-repeat: repeat-y;
+}
+
+.callout
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 35px 0px 20px;
+	color: #FFFFFF;
+}
+
+/* Home Page Styles */
+
+#headerHome
+{
+	margin: 8px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 961px;
+	float: left;
+	height: 116px;
+	background-color: #FFFFFF;
+}
+
+#contentWrapperHome
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	float: left;
+	width: 961px;
+	background-color: #FFFFFF;
+}
+
+.contentWrapperHome
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#rightWrapperHome
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 20px 10px;
+	float: right;
+	width: 470px;
+	background-color: #FFFFFF;
+}
+
+.rightWrapperHome
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 30px 0px 20px;
+	border-left: 1px solid #dbdad8; /* light green */
+}
+
+#leftWrapperHome
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	float: left;
+	width: 480px;
+	background-color: #FFFFFF;
+}
+
+.leftWrapperHome
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 12px;
+}
+
+#centerWrapperHome
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 10px;
+	float: left;
+	width: 280px;
+	background-color: #FFFFFF;
+}
+
+.centerWrapperHome
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 15px;
+	border-left: 1px solid #dbdad8; /* light green */
+}
+
+/* PRIMARY NAVIGATION */
+
+body.P1 #P1 a, body.P2 #P2 a, body.P3 #P3 a, body.P4 #P4 a, body.P5 #P5 a, body.P6 #P6 a, body.P7 #P7 a, body.P8 #P8 a, body.P9 #P9 a, body.P10 #P10 a
+{
+	/* background-image:url(/images/nav_selected.gif); 	background-repeat:repeat-x; */
+	background-color: #1163a2;
+}
+
+#primNav
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	background-image: url(/images/prim_nav_bkgd_2.gif);
+	background-repeat: repeat-x;
+	height: 38px;
+	clear: both;
+}
+
+#primNav ul
+{
+	padding: 0;
+	margin: 0px 0px 0px 0px;
+	list-style: none;
+	width: 960px;
+	height: 38px;
+}
+
+#primNav li
+{
+	font-size: 90%;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	width: auto;
+	display: block;
+	float: left;
+	position: relative;
+}
+
+#primNav a
+{
+	display: block;
+	float: left;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 10px 15px 10px 15px;
+	font-weight: bold;
+}
+
+#primNav a:hover
+{
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #1163a2;
+}
+
+body.S1 li#S1 a, body.S2 li#S2 a, body.S3 li#S3 a, body.S4 li#S4 a, body.S5 li#S5 a, body.S6 li#S6 a, body.S7 li#S7 a, body.S8 li#S8 a, body.S9 li#S9 a
+{
+	/*background-image: url(/images/secNav_selected.gif); 	background-repeat: no-repeat; 	background-position:left;*/
+	color: #173a6f;
+}
+
+/* LINKS */
+
+a
+{
+	color: #1163a2;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover
+{
+	color: #1163a2;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+a.underline
+{
+	color: #1163A2 !important;
+	font-weight: normal;
+}
+
+a.greenBold
+{
+	color: #0f9a4e;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a.greenBold:hover
+{
+	color: #0f9a4e;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+/* GENERAL DESIGN STYLES */
+
+p
+{
+	font-size: 90%;
+	padding: 5px 0px 0px 0px;
+	margin: 0px 0px 25px 0px;
+}
+
+h1
+{
+	font: normal 200%/1.25em "Trebuchet MS" , Arial, Helvetica, sans-serif;
+	margin: 10px 0px 20px 0px;
+	color: #3584b0;
+}
+
+body.evalTool h1
+{
+	color: #c3d9e4;
+}
+
+h2
+{
+	font: normal 175%/1.25em "Trebuchet MS" , Arial, Helvetica, sans-serif;
+	color: #277575;
+	margin: 15px 0px 15px 0px;
+}
+
+body.evalTool h2.preEval
+{
+	border-top: 1px #d2e7e5 solid;
+	padding: 20px 0px 0px 15px;
+	margin: 15px 0px 10px 0px;
+	background-image: url(/images/grfx_evaluate_bg_fade.gif);
+	background-position: top;
+	background-repeat: repeat-x;
+}
+
+
+body.evalTool h2
+{
+	padding: 0px 0px 0px 15px;
+	margin: 10px 0px 10px 0px;
+}
+
+h3
+{
+	font: normal 125%/0.9em "Trebuchet MS" , Arial, Helvetica, sans-serif;
+	color: #174b55;
+	font-weight: bold;
+	margin: 10px 0px 5px 5px;
+}
+
+h4
+{
+	font: normal 115%/1.25em "Trebuchet MS" , Arial, Helvetica, sans-serif;
+	color: #499ac7;
+	letter-spacing: .25em;
+	text-transform: uppercase;
+	margin: 15px 0px 20px 0px;
+}
+
+.paddingRight10
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 10px 0px 0px;
+}
+
+.small
+{
+	font: normal 85%/1.25em Arial, Verdana, serif;
+	color: #777;
+}
+
+.floatRight
+{
+	float: right;
+}
+.floatLeft
+{
+	float: left;
+}
+.floatBottom
+{
+	margin: 10px 0px 0px 10px;
+}
+
+.listItem
+{
+	list-style: square;
+	margin: 10px 0px 0px 0px;
+}
+
+.listItem ul
+{
+	margin: 0px 0px 0px 20px;
+	font-weight: bold;
+}
+
+.listItem li
+{
+	list-style: square;
+	padding: 8px 0px 8px 0px;
+}
+
+.imgBorder
+{
+	margin: 10px 10px 10px 10px;
+	padding: 8px 8px 8px 8px;
+	background-color: #e9f2f9;
+}
+
+#button
+{
+	margin: 0px 0px 5px 0px;
+	padding: 2px 5px 7px 7px;
+	border-left: 1px solid #fdb813; /*  */
+	border-right: 1px solid #474747; /*  */
+	border-top: 1px solid #fdb813; /*  */
+	border-bottom: 1px solid #474747; /*  */
+	background-image: url(/images/bkgd_button.gif);
+	background-repeat: repeat-x;
+	height: 15px;
+}
+
+/* Evaluation styles */
+
+.evalBtnOutline
+{
+	border: 1px #fbaf5f solid;
+	padding: 1px;
+}
+
+.evalBtn
+{
+	padding: 5px 18px 5px 18px;
+	background-image: url(/images/grfx_eval_btn_bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.evalBtn a
+{
+	color: #dfecec;
+	padding: 10px;
+}
+
+.evalBtn a:hover
+{
+	color: #FFF;
+	text-decoration: none;
+}
+
+.preEvalTitle
+{
+	color: #518d80; /* blue green */
+}
+
+.bioFuel
+{
+	color: #8dc73d; /* green */
+}
+
+.geoThermal
+{
+	color: #8a7967; /* brown */
+}
+
+.hydroElectric
+{
+	color: #9abbdc; /* lt blue */
+}
+
+.oceanThermal
+{
+	color: #3a6795; /* dark blue */
+}
+
+.solar
+{
+	color: #fbaf5f; /* orange */
+}
+
+.wasteBiomass
+{
+	color: #9b8100; /* brown */
+}
+
+.waveHydrokinetic
+{
+	color: #90d2c5; /* teal */
+}
+
+.wind
+{
+	color: #c9aad1; /* lavender */
+}
+
+table.chooseTech
+{
+	padding: 25px 0px 0px 0px;
+	margin: 0px 0px 0px 35px;
+}
+
+table.chooseTech td
+{
+	border-right: 1px solid #dceaea; /* very lt blue */
+	border-top: 1px solid #dceaea; /* very lt blue */
+	border-bottom: 1px solid #dceaea; /* very lt blue */
+	padding: 5px;
+	color: #174b55;
+	background-color: #f3f8f8;
+}
+
+table.chooseTech td.bioFuel
+{
+	border-left: 5px #8dc73d solid;
+}
+
+table.chooseTech td.noStyle
+{
+	border: 0;
+	background: none;
+	padding-right: 15px;
+}
+
+table.chooseTech td.geoThermal
+{
+	border-left: 5px #8a7967 solid; /* brown */
+}
+
+table.chooseTech td.hydroElectric
+{
+	border-left: 5px #9abbdc solid; /* lt blue */
+}
+
+table.chooseTech td.oceanThermal
+{
+	border-left: 5px #3a6795 solid; /* dark blue */
+}
+
+table.chooseTech td.solar
+{
+	border-left: 5px #fbaf5f solid; /* orange */
+}
+
+table.chooseTech td.wasteBiomass
+{
+	border-left: 5px #9b8100 solid; /* brown */
+}
+
+table.chooseTech td.waveHydrokinetic
+{
+	border-left: 5px #90d2c5 solid; /* teal */
+}
+
+table.chooseTech td.wind
+{
+	border-left: 5px #c9aad1 solid; /* lavender */
+}
+
+table.chooseIsland
+{
+	padding: 20px 385px 0px 0px;
+	margin: 20px 0px 0px 0px;
+	background-image: url(/images/grfx_pre_eval_map.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+}
+
+table.chooseIsland td
+{
+	border: 1px solid #dceaea; /* very lt blue */
+	border-left: 5px #4b8887 solid;
+	padding: 5px;
+	color: #174b55;
+	background-color: #f3f8f8;
+}
+
+table.chooseIsland td.noStyle
+{
+	border: 0;
+	background: none;
+	padding-right: 15px;
+}
+
+table.evaluate
+{
+	margin: 0px 0px 20px 40px;
+	border-collapse: collapse;
+}
+
+table.evaluate td
+{
+	padding: 7px;
+}
+
+.oddRow
+{
+	background-color: #eff6f5;
+}
+
+#validateMessage p
+{
+	color: #ef8008;
+	border: 1px #fbdcba solid;
+	font-size: 85%;
+	width: 255px;
+	padding: 5px;
+	float: right;
+}
+
+.hidden
+{
+	display: none;
+}
+
+table.questions
+{
+	border-collapse: collapse;
+	width: 680px;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+table.questions td
+{
+	border: 1px solid #dceaea; /* very lt blue */
+	padding: 8px;
+}
+
+table.questions a
+{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+table.questions a:hover
+{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.permits
+{
+	width: 190px;
+	border: 1px #dceaea solid;
+	float: right;
+}
+
+.permits ul
+{
+	list-style-type: none;
+	margin: 0px 0px 0px 0px;
+	padding: 5px;
+}
+
+.permits li
+{
+	list-style-type: none;
+	margin: 0px 0px 0px 0px;
+	padding: 8px;
+	border-bottom: 1px #dceaea dotted;
+	font-size: 85%;
+}
+
+.permits li.lastItem
+{
+	border-bottom: none;
+}
+
+.permits li a
+{
+	color: #174b55;
+	padding: 0px 18px 0px 0px;
+}
+.permits li a:hover
+{
+	color: #318291;
+	text-decoration: none;
+}
+
+.permits p
+{
+	font-size: 90%;
+	margin: 0px 0px 0px 0px;
+	padding: 13px 0px 13px 0px;
+	text-align: center;
+	border-bottom: 1px #dceaea solid;
+	background-image: url(/images/grfx_permits_title_bg.gif);
+	background-position: top;
+	background-repeat: repeat-x;
+}
+
+td.topRow
+{
+	font-weight: bold;
+}
+
+td.leftColFill
+{
+	background-color: #f2f8f8; /* lt blue */
+}
+
+td.noRtBorder
+{
+	border-right: 1px solid #FFFFFF;
+}
+
+td.noLftBorder
+{
+	border-left: 1px solid #FFFFFF;
+}
+
+td.noBtBorder
+{
+	border-bottom: none;
+}
+
+.center
+{
+	text-align: center;
+}
+
+.white
+{
+	color: #ffffff;
+}
+
+.evalBtnOutline
+{
+	border: 1px #fbaf5f solid;
+	margin: 0px 8px 0px 0px;
+	padding: 1px;
+}
+
+.evalBtn
+{
+	padding: 3px 6px 3px 6px;
+	background-image: url(/images/grfx_eval_btn_bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.evalBtn a
+{
+	color: #dfecec;
+	padding: 10px;
+}
+
+.evalBtn a:hover
+{
+	color: #FFF;
+	text-decoration: none;
+}
+
+.resetBtn
+{
+	padding: 3px 6px 3px 6px;
+	background-color: #ffffff;
+}
+
+.resetBtn a
+{
+	color: #277575;
+	padding: 10px;
+}
+
+.resetBtn a:hover
+{
+	color: #499ac7;
+	text-decoration: none;
+} 
+
+table.editform
+{
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	width: 850px;
+}
+
+table.editform td
+{
+	border: 1px solid #dceaea; /* very lt blue */
+	padding: 5px;
+	color: #174b55;
+	background-color: #f3f8f8;
+	vertical-align: top;
+}
+table.editform td.buttonRow
+{
+	border: 0;
+	background: none;
+	padding-right: 15px;
+	vertical-align: bottom;
+	height: 40px;
+} 
+
+table.noStyle td
+{
+	border: 0px;
+	vertical-align: top;
+}
+
+input, textarea
+{								
+	font: normal small/1.45em "Trebuchet MS" , "Helvetica";
+	color: #555555;
+}
+
+.required 
+{
+	color: Red;
+}
+
+/* Data Grid */
+
+.dataGrid 
+{
+    background: none repeat scroll 0 0 #FCFCFC;
+    border: 1px solid #A5B3C5;
+    font: 12px/16px Arial,sans-serif;
+    width: 100%;
+}
+
+.dataGrid td
+{
+    padding: 4px;   
+}
+
+.dataGrid th:first-child, td:first-child
+{
+    padding-left: 8px;
+}
+
+.dataGridEvenRow 
+{
+    background-color: #EBEFF3;   
+}
+
+.dataGridOddRow 
+{
+    background-color: #FCFCFC;   
+}
+
+.headerRow
+{
+    padding-bottom: 4px;
+    padding-top: 5px;
+    text-align: left;
+    color: #4C607A;
+    border-bottom: 1px solid #A5B3C5;
+    line-height: 25px;
+    background: none repeat scroll 0 0 #F1F5FB;
+}
+.headerRow th {
+    text-align: left;
+    padding: 5px;
+}
+.headerRow a
+{
+    padding-bottom: 4px;
+    padding-top: 5px;
+    text-align: left;
+    color: #4C607A;
+}
+
+.commandRow 
+{
+    background: #E4EDF8;   
+    border: 1px solid #A5B3C5;
+    padding: 5px;
+}
+
+.pagerRow 
+{
+    line-height: 25px;
+    border-top: 1px solid #A5B3C5;
+    background: none repeat scroll 0 0 #F1F5FB;
+}
+
+.userDataGrid 
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #828282;
+    font: 12px/16px "segoe ui",arial,sans-serif;
+    width: 100%;
+    color: #333333;
+}
+
+.userDataGrid td
+{
+    padding: 4px 7px 3px 0;   
+}
+
+.userDataGrid th:first-child, td:first-child
+{
+    padding-left: 8px;
+}
+
+.userHeaderRow
+{
+    padding-bottom: 4px;
+    padding-top: 5px;
+    text-align: left;
+    color: #333333;
+    border-color: #828282;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    line-height: 25px;
+    background-color: #EAEAEA;
+}
+
+.userHeaderRow a
+{
+    padding-bottom: 4px;
+    padding-top: 5px;
+    text-align: left;
+    color: #333333;
+}
+
+.userPagerRow 
+{
+    line-height: 25px;
+    border-top: 1px solid #828282;
+    background-color: #EAEAEA;
+}
+
+.userDataGridOddRow 
+{
+ background: none repeat scroll 0 0 #F2F2F2;   
+}

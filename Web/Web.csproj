@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B5FA4F3-4F8E-42C6-A366-16BF51C01081}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HawaiiDBEDT.Web</RootNamespace>
+    <AssemblyName>HawaiiDBEDT.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FILLFORM</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <PublishDatabases>false</PublishDatabases>
+    <DeployIisAppPath>energywiz</DeployIisAppPath>
+    <DesktopBuildPackageLocation>..\..\..\..\temp\Web.zip</DesktopBuildPackageLocation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DBauer.Web.UI.WebControls.DynamicControlsPlaceholder">
+      <HintPath>..\components\DBauer.Web.UI.WebControls.DynamicControlsPlaceholder.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizer">
+      <HintPath>..\components\HtmlSanitizer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net35-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\components\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\components\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\components\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\components\System.Web.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\components\System.Web.DataVisualization.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\controls\TransferableListBox.ascx" />
+    <Content Include="admin\default.aspx" />
+    <Content Include="admin\department\default.aspx" />
+    <Content Include="admin\department\edit.aspx" />
+    <Content Include="admin\error.html" />
+    <Content Include="admin\evaluation\default.aspx" />
+    <Content Include="admin\images\cancel.gif" />
+    <Content Include="admin\images\delete.gif" />
+    <Content Include="admin\images\detail.gif" />
+    <Content Include="admin\images\edit.gif" />
+    <Content Include="admin\images\firstpage.gif" />
+    <Content Include="admin\images\header.jpg" />
+    <Content Include="admin\images\lastpage.gif" />
+    <Content Include="admin\images\nextpage.gif" />
+    <Content Include="admin\images\prevpage.gif" />
+    <Content Include="admin\images\submit_btn.png" />
+    <Content Include="admin\images\update.gif" />
+    <Content Include="admin\include\css\stylesheet.css" />
+    <Content Include="admin\include\footer.aspx" />
+    <Content Include="admin\include\css\fullgridpager.css" />
+    <Content Include="admin\include\header.aspx" />
+    <Content Include="admin\include\js\javascript.js" />
+    <Content Include="admin\location\default.aspx" />
+    <Content Include="admin\location\edit.aspx" />
+    <Content Include="admin\login.aspx" />
+    <Content Include="admin\permit\default.aspx" />
+    <Content Include="admin\permit\edit.aspx" />
+    <Content Include="admin\permit_set\edit.aspx" />
+    <Content Include="admin\permit_set\default.aspx" />
+    <Content Include="admin\pre_eval\default.aspx" />
+    <Content Include="admin\pre_eval\edit.aspx" />
+    <Content Include="admin\pre_eval\response.aspx" />
+    <Content Include="admin\question\default.aspx" />
+    <Content Include="admin\question\edit.aspx" />
+    <Content Include="admin\question\response.aspx" />
+    <Content Include="admin\question_set\default.aspx" />
+    <Content Include="admin\question_set\edit.aspx" />
+    <Content Include="admin\question_set\reorder.aspx" />
+    <Content Include="admin\technology\default.aspx" />
+    <Content Include="admin\technology\edit.aspx" />
+    <Content Include="admin\user\default.aspx" />
+    <Content Include="admin\user\detail.aspx" />
+    <Content Include="AppVersion.aspx" />
+    <Content Include="contacts_list\default.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="error.html" />
+    <Content Include="evaluate\default.aspx" />
+    <Content Include="evaluate\permit_set.aspx" />
+    <Content Include="evaluate\review.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="global\default.aspx" />
+    <Content Include="images\bg.gif" />
+    <Content Include="images\bg_progress_dots.gif" />
+    <Content Include="images\bkgd.gif" />
+    <Content Include="images\check_no.gif" />
+    <Content Include="images\check_no.png" />
+    <Content Include="images\check_yes.gif" />
+    <Content Include="images\check_yes.png" />
+    <Content Include="images\confirm.png" />
+    <Content Include="images\delete.gif" />
+    <Content Include="images\detail.gif" />
+    <Content Include="images\edit.gif" />
+    <Content Include="images\error.png" />
+    <Content Include="images\eval_progress_bg.gif" />
+    <Content Include="images\eval_progress_sprite.png" />
+    <Content Include="images\eval_square_active.png" />
+    <Content Include="images\eval_square_inactive.png" />
+    <Content Include="images\grfx_evaluate_bg_fade.gif" />
+    <Content Include="images\grfx_evaluate_title.gif" />
+    <Content Include="images\grfx_evaluate_title_light.gif" />
+    <Content Include="images\grfx_eval_btn_bg.gif" />
+    <Content Include="images\grfx_permits_title_bg.gif" />
+    <Content Include="images\grfx_pre_eval_map.gif" />
+    <Content Include="images\header.jpg" />
+    <Content Include="images\help_progress_bar.gif" />
+    <Content Include="images\i.gif" />
+    <Content Include="images\icon_pdf.gif" />
+    <Content Include="images\icon_tool_tip.gif" />
+    <Content Include="images\icon_tool_tip2.gif" />
+    <Content Include="images\jquery\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="images\jquery\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="images\jquery\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="images\jquery\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="images\jquery\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="images\jquery\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="images\jquery\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="images\jquery\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="images\jquery\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="images\jquery\ui-icons_222222_256x240.png" />
+    <Content Include="images\jquery\ui-icons_228ef1_256x240.png" />
+    <Content Include="images\jquery\ui-icons_ef8c08_256x240.png" />
+    <Content Include="images\jquery\ui-icons_ffd27a_256x240.png" />
+    <Content Include="images\jquery\ui-icons_ffffff_256x240.png" />
+    <Content Include="images\page_copy.png" />
+    <Content Include="images\pencil.gif" />
+    <Content Include="images\placeholder_footer.jpg" />
+    <Content Include="images\placeholder_navigation.jpg" />
+    <Content Include="images\progress_dot_active.gif" />
+    <Content Include="images\progress_dot_inactive.gif" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\spinner.gif" />
+    <Content Include="images\submit_btn.png" />
+    <Content Include="images\transp_skip.gif" />
+    <Content Include="include\controls\evaluation.ascx" />
+    <Content Include="include\controls\global_nav.ascx" />
+    <Content Include="include\controls\login.ascx" />
+    <Content Include="include\controls\permit_set.ascx" />
+    <Content Include="include\controls\pre_evaluation.ascx" />
+    <Content Include="include\controls\progress_bar.ascx" />
+    <Content Include="include\controls\question_set.ascx" />
+    <Content Include="include\controls\radcontrols\css\combobox.css" />
+    <Content Include="include\controls\radcontrols\combobox\rcbSprite.png" />
+    <Content Include="include\controls\radcontrols\combobox\rcbSpriteIE6.png" />
+    <Content Include="include\controls\radcontrols\combobox\Windows7.gif" />
+    <Content Include="include\controls\radcontrols\editor\toolbar.xml" />
+    <Content Include="include\controls\radcontrols\css\editor_content_area.css" />
+    <Content Include="include\controls\radcontrols\css\grid.css" />
+    <Content Include="include\controls\radcontrols\grid\AddRecord.gif" />
+    <Content Include="include\controls\radcontrols\grid\Cancel.gif" />
+    <Content Include="include\controls\radcontrols\grid\Delete.gif" />
+    <Content Include="include\controls\radcontrols\grid\Edit.gif" />
+    <Content Include="include\controls\radcontrols\grid\Filter.gif" />
+    <Content Include="include\controls\radcontrols\grid\MoveDown.gif" />
+    <Content Include="include\controls\radcontrols\grid\MoveUp.gif" />
+    <Content Include="include\controls\radcontrols\grid\PagingFirst.gif" />
+    <Content Include="include\controls\radcontrols\grid\PagingLast.gif" />
+    <Content Include="include\controls\radcontrols\grid\PagingNext.gif" />
+    <Content Include="include\controls\radcontrols\grid\PagingPrev.gif" />
+    <Content Include="include\controls\radcontrols\grid\Refresh.gif" />
+    <Content Include="include\controls\radcontrols\grid\rgDrag.gif" />
+    <Content Include="include\controls\radcontrols\grid\SingleMinus.gif" />
+    <Content Include="include\controls\radcontrols\grid\SinglePlus.gif" />
+    <Content Include="include\controls\radcontrols\grid\SortAsc.gif" />
+    <Content Include="include\controls\radcontrols\grid\SortDesc.gif" />
+    <Content Include="include\controls\radcontrols\grid\sprite.gif" />
+    <Content Include="include\controls\radcontrols\grid\Update.gif" />
+    <Content Include="include\controls\radcontrols\grid\Windows7.gif" />
+    <Content Include="include\controls\radcontrols\css\listbox.css" />
+    <Content Include="include\controls\radcontrols\listbox\rlbButtonDisabled.png" />
+    <Content Include="include\controls\radcontrols\listbox\rlbButtonDisabledIE6.png" />
+    <Content Include="include\controls\radcontrols\listbox\rlbButtonHover.png" />
+    <Content Include="include\controls\radcontrols\listbox\rlbButtonHoverIE6.png" />
+    <Content Include="include\controls\radcontrols\listbox\rlbButtonNormal.png" />
+    <Content Include="include\controls\radcontrols\listbox\rlbButtonNormalIE6.png" />
+    <Content Include="include\controls\radcontrols\listbox\rlbDropClue.png" />
+    <Content Include="include\controls\radcontrols\listbox\rlbSprite.png" />
+    <Content Include="include\controls\radcontrols\listbox\Windows7.gif" />
+    <Content Include="include\controls\results.ascx" />
+    <Content Include="include\css\jquery-ui.css" />
+    <Content Include="include\font\fontawesome-webfont.svg" />
+    <Content Include="include\footer.aspx" />
+    <Content Include="include\global.aspx" />
+    <Content Include="include\header.aspx" />
+    <Content Include="include\js\downloadPlugin.js" />
+    <Content Include="include\js\fillFormScript.js" />
+    <Content Include="include\js\javascript.js" />
+    <Content Include="include\js\jquery-1.6.3.min.js" />
+    <Content Include="include\css\jquery-ui-1.8.6.custom.css" />
+    <Content Include="include\js\jquery-ui-1.8.6.custom.min.js" />
+    <Content Include="include\css\jquery.qtip.css" />
+    <Content Include="include\js\jquery-ui.min.js" />
+    <Content Include="include\js\jquery.blockUI.2.31.js" />
+    <Content Include="include\js\jquery.dataTables.min.js" />
+    <Content Include="include\js\jquery.qtip.pack.js" />
+    <Content Include="include\js\jquery.timer.js" />
+    <Content Include="include\prim_nav.aspx" />
+    <Content Include="include\css\print.css" />
+    <Content Include="include\progress_bar.aspx" />
+    <Content Include="include\css\stylesheet.css" />
+    <Content Include="permitPlan\getImage.aspx" />
+    <Content Include="permitPlan\permitChart.ascx" />
+    <Content Include="permitPlan\PermitImage.aspx" />
+    <Content Include="permitPlan\PermitPlan.aspx" />
+    <Content Include="profile\default.aspx" />
+    <Content Include="profile\evaluations.aspx" />
+    <Content Include="profile\forgot_password.aspx" />
+    <Content Include="profile\logout.aspx" />
+    <Content Include="profile\register.aspx" />
+    <Content Include="profile\register_confirm.aspx" />
+    <Content Include="scripts\tinymce\license.txt" />
+    <Content Include="scripts\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\bbcode\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\code\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\editable_selects.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\form_utils.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\mctabs.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\tiny_mce_popup.js" />
+    <Content Include="scripts\tinymce\plugins\compat3x\validate.js" />
+    <Content Include="scripts\tinymce\plugins\contextmenu\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="scripts\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\example\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\example_dependency\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\fullpage\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\hr\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\image\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\layer\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\legacyoutput\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\link\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\lists\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="scripts\tinymce\plugins\media\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\noneditable\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\paste\classes\Clipboard.js" />
+    <Content Include="scripts\tinymce\plugins\paste\classes\Plugin.js" />
+    <Content Include="scripts\tinymce\plugins\paste\classes\Quirks.js" />
+    <Content Include="scripts\tinymce\plugins\paste\classes\WordFilter.js" />
+    <Content Include="scripts\tinymce\plugins\paste\plugin.dev.js" />
+    <Content Include="scripts\tinymce\plugins\paste\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\preview\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\print\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\save\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\spellchecker\classes\DomTextMatcher.js" />
+    <Content Include="scripts\tinymce\plugins\spellchecker\classes\Plugin.js" />
+    <Content Include="scripts\tinymce\plugins\spellchecker\plugin.dev.js" />
+    <Content Include="scripts\tinymce\plugins\spellchecker\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\tabfocus\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\table\classes\CellSelection.js" />
+    <Content Include="scripts\tinymce\plugins\table\classes\Plugin.js" />
+    <Content Include="scripts\tinymce\plugins\table\classes\Quirks.js" />
+    <Content Include="scripts\tinymce\plugins\table\classes\TableGrid.js" />
+    <Content Include="scripts\tinymce\plugins\table\plugin.dev.js" />
+    <Content Include="scripts\tinymce\plugins\table\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\template\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\textcolor\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\address.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\article.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\aside.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\blockquote.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\div.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\figure.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\h1.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\h2.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\h3.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\h4.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\h5.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\h6.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\hgroup.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\p.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\pre.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\img\section.gif" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="scripts\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="scripts\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\icomoon-small.svg" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\icomoon.svg" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\img\wline.gif" />
+    <Content Include="scripts\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="scripts\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="scripts\tinymce\themes\modern\theme.js" />
+    <Content Include="scripts\tinymce\themes\modern\theme.min.js" />
+    <Content Include="scripts\tinymce\tinymce.js" />
+    <Content Include="scripts\tinymce\tinymce.min.js" />
+    <Content Include="scripts\tinymce_setup.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\controls\TopPagerGridView.cs" />
+    <Compile Include="admin\controls\TransferableListBox.ascx.cs">
+      <DependentUpon>TransferableListBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\controls\TransferableListBox.ascx.designer.cs">
+      <DependentUpon>TransferableListBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\department\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\department\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\department\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\department\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ErrorHandlingModule.cs" />
+    <Compile Include="admin\evaluation\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\evaluation\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\include\FullGridPager.cs" />
+    <Compile Include="admin\location\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\location\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\location\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\location\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\permit\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\permit\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\permit\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\permit\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\permit_set\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\permit_set\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\permit_set\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\permit_set\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\pre_eval\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\pre_eval\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\pre_eval\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\pre_eval\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\pre_eval\response.aspx.cs">
+      <DependentUpon>response.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\pre_eval\response.aspx.designer.cs">
+      <DependentUpon>response.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\question\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\question\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\question\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\question\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\question\response.aspx.cs">
+      <DependentUpon>response.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\question\response.aspx.designer.cs">
+      <DependentUpon>response.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\question_set\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\question_set\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\question_set\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\question_set\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\question_set\reorder.aspx.cs">
+      <DependentUpon>reorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\question_set\reorder.aspx.designer.cs">
+      <DependentUpon>reorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\technology\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\technology\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\technology\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\technology\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\user\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\user\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\user\detail.aspx.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\user\detail.aspx.designer.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppVersion.aspx.cs">
+      <DependentUpon>AppVersion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppVersion.aspx.designer.cs">
+      <DependentUpon>AppVersion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="evaluate\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="evaluate\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="evaluate\permit_set.aspx.cs">
+      <DependentUpon>permit_set.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="evaluate\permit_set.aspx.designer.cs">
+      <DependentUpon>permit_set.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="evaluate\review.aspx.cs">
+      <DependentUpon>review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="evaluate\review.aspx.designer.cs">
+      <DependentUpon>review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="include\controls\BaseControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\controls\evaluation.ascx.cs">
+      <DependentUpon>evaluation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\controls\evaluation.ascx.designer.cs">
+      <DependentUpon>evaluation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\controls\global_nav.ascx.cs">
+      <DependentUpon>global_nav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\controls\global_nav.ascx.designer.cs">
+      <DependentUpon>global_nav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\controls\ListBoxTransferDirection.cs" />
+    <Compile Include="include\controls\ListBoxTransferEventArgs.cs" />
+    <Compile Include="include\controls\login.ascx.cs">
+      <DependentUpon>login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\controls\login.ascx.designer.cs">
+      <DependentUpon>login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\controls\permit_set.ascx.cs">
+      <DependentUpon>permit_set.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\controls\permit_set.ascx.designer.cs">
+      <DependentUpon>permit_set.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\controls\pre_evaluation.ascx.cs">
+      <DependentUpon>pre_evaluation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\controls\pre_evaluation.ascx.designer.cs">
+      <DependentUpon>pre_evaluation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\controls\progress_bar.ascx.cs">
+      <DependentUpon>progress_bar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\controls\progress_bar.ascx.designer.cs">
+      <DependentUpon>progress_bar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\controls\question_set.ascx.cs">
+      <DependentUpon>question_set.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\controls\question_set.ascx.designer.cs">
+      <DependentUpon>question_set.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\controls\results.ascx.cs">
+      <DependentUpon>results.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\controls\results.ascx.designer.cs">
+      <DependentUpon>results.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="permitPlan\getImage.aspx.cs">
+      <DependentUpon>getImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="permitPlan\getImage.aspx.designer.cs">
+      <DependentUpon>getImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="permitPlan\PdfPrintHelper.cs" />
+    <Compile Include="permitPlan\permitChart.ascx.cs">
+      <DependentUpon>permitChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="permitPlan\permitChart.ascx.designer.cs">
+      <DependentUpon>permitChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="permitPlan\PermitImage.aspx.cs">
+      <DependentUpon>PermitImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="permitPlan\PermitImage.aspx.designer.cs">
+      <DependentUpon>PermitImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="permitPlan\PermitPlan.aspx.cs">
+      <DependentUpon>PermitPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="permitPlan\PermitPlan.aspx.designer.cs">
+      <DependentUpon>PermitPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="permitPlan\QapList.cs" />
+    <Compile Include="profile\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile\evaluations.aspx.cs">
+      <DependentUpon>evaluations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile\evaluations.aspx.designer.cs">
+      <DependentUpon>evaluations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile\forgot_password.aspx.cs">
+      <DependentUpon>forgot_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile\forgot_password.aspx.designer.cs">
+      <DependentUpon>forgot_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\DateTimeUtils.cs" />
+    <Compile Include="utils\HtmlEncoder.cs" />
+    <Compile Include="utils\SortExpressionBuilder.cs" />
+    <Compile Include="utils\Sorting.cs" />
+    <Compile Include="utils\SortingExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="admin\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="admin\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="admin\Web.Dev.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="include\font\fontawesome-webfont.eot" />
+    <Content Include="include\font\fontawesome-webfont.ttf" />
+    <Content Include="include\font\fontawesome-webfont.woff" />
+    <Content Include="include\font\FontAwesome.otf" />
+    <None Include="admin\Web.Prod.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Properties\PublishProfiles\DeploymentPackage.pubxml" />
+    <None Include="Properties\PublishProfiles\FilesystemPackage.pubxml" />
+    <None Include="scripts\tinymce\langs\readme.md" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\icomoon-small.eot" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\icomoon-small.ttf" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\icomoon-small.woff" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\icomoon.eot" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\icomoon.ttf" />
+    <Content Include="scripts\tinymce\skins\lightgray\fonts\icomoon.woff" />
+    <None Include="scripts\tinymce\skins\lightgray\fonts\readme.md" />
+    <Content Include="Web.Dev.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.Prod.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="permitPlan\permitPlan.rdlc">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="permitPlan\permitSets.rdlc">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{F9AA23F4-9893-4769-BEE1-C2219B26CC0D}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{48099293-4696-498b-9659-fd7b0952e87b}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="permitPlan\image.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51770</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8001/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)bin" "$(ProjectDir)admin\bin" /y /r /i</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
